@@ -1,1 +1,88 @@
-<h1>Hello!<h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Aziza!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F7CED7; /* Light pink */
+            background-image: linear-gradient(to bottom, #F7CED7, #F4A8B5, #F080A3, #E85691, #DE2B7E); /* Smooth palette */
+            color: #333; /* Dark text color */
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 100px;
+            transition: opacity 1s ease-in-out; /* Smooth transition */
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        .birthday-wishes {
+            font-size: 1.5em;
+            font-style: italic;
+        }
+
+        .signature {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .hidden {
+            opacity: 0; /* Initially hidden */
+            pointer-events: none; /* Ensure no interaction when hidden */
+        }
+
+        button {
+            background-color: #E85691; /* Dark pink */
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #F4A8B5; /* Lighter pink */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="firstPage">
+        <h1>Click Here First!</h1>
+        <button onclick="showWishes()">Click to Reveal something as good as you are</button>
+    </div>
+
+    <div class="container hidden" id="wishesPage">
+        <h1>Happy Birthday Aziza!</h1>
+        <p>Wishing you a day filled with love, joy, and all the happiness in the world.</p>
+        <p class="birthday-wishes">May your special day be as beautiful and radiant as you are.</p>
+        <p class="signature">Best wishes,</p>
+        <p class="signature">Anass</p>
+    </div>
+
+    <script>
+        function showWishes() {
+            document.getElementById('firstPage').classList.add('hidden');
+            document.getElementById('wishesPage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
